@@ -21,11 +21,9 @@ Hier habe ich für euch ein kleines Ticket System was eins meiner ersten Ticket 
 
 ‎ 
 
-<div class="ok">
-  <video width="100%" height="auto" controls>
+<video width="100%" height="auto" controls>
     <source src="https://cdn.discordapp.com/attachments/1089596110806466672/1089596415963041792/Ticket_senden.mp4" type="video/mp4">
-  </video>
-</div>
+</video>
 
 ***
 ##  ⌛ Cooldown
@@ -42,11 +40,9 @@ Damit ist es auch durch einen Raid geschützt.
 3. Sobald das Embed erstellt wurde können auch schon die Ticket erstellt werden.  
 Es ist wichtig das die richtigen ID's eingetragen sind, sonst können keine Ticket's erstellt werden.
 
-<div>
-  <video width="100%" height="auto" controls>
+<video width="100%" height="auto" controls>
     <source src="https://cdn.discordapp.com/attachments/1089596110806466672/1089596416562835456/ticket_erstellen.mp4" type="video/mp4">
-  </video>
-</div> 
+</video>
 
 
 ***
