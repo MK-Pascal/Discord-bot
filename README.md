@@ -20,10 +20,11 @@ Hier habe ich für euch ein kleines Ticket System was eins meiner ersten Ticket 
     `/ticket guild` kann verwendet werden, um die Guild ID zu aktualisieren, ohne den `/ticket send` Befehl erneut zu verwenden.
 
 ‎ 
+<div>
+  <img width="auto" height="auto" src="https://cdn.discordapp.com/attachments/1089596110806466672/1089696671006457896/image.png">
+  </img>
+</div>  
 
-<video width="100%" height="auto" controls>
-    <source src="https://cdn.discordapp.com/attachments/1089596110806466672/1089596415963041792/Ticket_senden.mp4">
-</video>
 
 ***
 ##  ⌛ Cooldown
@@ -37,25 +38,38 @@ Damit ist es auch durch einen Raid geschützt.
 ***
 
 ## 🏷️ Embed
-3. Sobald das Embed erstellt wurde können auch schon die Ticket erstellt werden.  
+3. Sobald das Embed erstellt wurde können auch schon die Ticket erstellt werden  
 Es ist wichtig das die richtigen ID's eingetragen sind, sonst können keine Ticket's erstellt werden.
 
-<video width="100%" height="auto" controls>
-    <source src="https://cdn.discordapp.com/attachments/1089596110806466672/1089596416562835456/ticket_erstellen.mp4" type="video/mp4">
-</video>
+<div>
+  <img width="auto" height="auto" src="https://cdn.discordapp.com/attachments/1089596110806466672/1089693819127202023/image.png">
+  </img>
+</div>  
+
+## 🎫 In Ticket
+
+ 4. In Ticket können dann 3 Button gedürckt werden, die das Ticket annehmen oder auch schlissen können.  
+<div>
+  <img width="auto" height="auto" src="https://cdn.discordapp.com/attachments/1089596110806466672/1089693398371414076/image.png">
+  </img>
+</div>
 
 
 ***
 
 ## 📝 Chatverlauf
-4. Nachdem das Ticket geschlossen wurde, wird der Chatverlauf zusammen mit einem Embed und einen .txt File in einen Log-Channel gesendet.  
+5. Nachdem das Ticket geschlossen wurde, wird der Chatverlauf zusammen mit einem Embed und einen .txt File in einen Log-Channel gesendet.  
 Dadurch ist der Chatverlauf auch noch für spätereZwecke verfügbar.  
 Diese Funktion ist äußerst nützlich, da man jederzeit auf vergangene Chats zurückgreifen kann, um Probleme nachzuvollziehen oder um sich an frühere Konversationen zu erinnern.
 <div>
-  <img width="100%" height="auto" src="https://cdn.discordapp.com/attachments/1089596110806466672/1089657878039761037/Comp_1_01469.png">
+  <img class="ok" width="auto" height="auto" src="https://cdn.discordapp.com/attachments/1089596110806466672/1089693874529784009/image.png">
   </img>
+      <style>
+        .ok{
+            border-radius: 15px;
+        }
+    </style>
 </div>
-
 <footer class="text glass" align="center">Make by MK_Pascal#0505</footer>
 
 
