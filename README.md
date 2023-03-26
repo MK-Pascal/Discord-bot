@@ -22,7 +22,7 @@ Hier habe ich für euch ein kleines Ticket System was eins meiner ersten Ticket 
 ‎ 
 
 <video width="100%" height="auto" controls>
-    <source src="https://cdn.discordapp.com/attachments/1089596110806466672/1089596415963041792/Ticket_senden.mp4" type="video/mp4">
+    <source src="https://cdn.discordapp.com/attachments/1089596110806466672/1089596415963041792/Ticket_senden.mp4">
 </video>
 
 ***
