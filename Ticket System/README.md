@@ -66,8 +66,5 @@ Es ist wichtig das die richtigen ID's eingetragen sind, sonst können keine Tick
 5. Nachdem das Ticket geschlossen wurde, wird der Chatverlauf zusammen mit einem Embed und einer .txt File in einen Log-Channel gesendet.  
 Dadurch ist der Chatverlauf auch noch für spätere Zwecke verfügbar.  
 Diese Funktion ist äußerst nützlich, da man jederzeit auf vergangene Chats zurückgreifen kann, um Probleme nachzuvollziehen oder um sich an frühere Konversationen zu erinnern.
-<div>
-  <img class="ok" width="auto" height="auto" src="https://cdn.discordapp.com/attachments/1089596110806466672/1089876693931528353/Comp_2_00000.png">
-  </img>
-</div>
-<footer class="text glass" align="center">Make by MK_Pascal#0505</footer>
+<p align="center"><b>Made by MK_Pascal#0505<b/><p/>
+
