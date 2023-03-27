@@ -1,6 +1,6 @@
 #   Ticket System von MK_Pascal#0505
 #   Hier ist ein kleines Ticket System Was ein guten einstieg für euch bietet.
-#   Folgende ID's müssen in Zeile  29, 138, 208, ausgetauscht werden
+#   
 #
 #
 import discord
