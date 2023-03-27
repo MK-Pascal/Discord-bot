@@ -30,7 +30,7 @@ Hier habe ich für euch ein kleines Ticket System was eins meiner ersten Ticket 
 </div>  
 
 
-***
+
 ##  ⌛ Cooldown
 2. Durch den Cooldown kann man erst aller 2 Minuten wieder ein neues Ticket öffnen.  
 Damit ist es auch durch einen Raid geschützt.
@@ -39,7 +39,7 @@ Damit ist es auch durch einen Raid geschützt.
   </img>
 </div>
 
-***
+
 
 ## 🏷️ Embed
 3. Sobald das Embed erstellt wurde können auch schon die Ticket erstellt werden  
@@ -60,7 +60,7 @@ Es ist wichtig das die richtigen ID's eingetragen sind, sonst können keine Tick
 </div>
 
 
-***
+
 
 ## 📝 Chatverlauf
 5. Nachdem das Ticket geschlossen wurde, wird der Chatverlauf zusammen mit einem Embed und einen .txt File in einen Log-Channel gesendet.  
