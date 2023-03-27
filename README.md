@@ -18,7 +18,7 @@ Hier habe ich für euch ein kleines Ticket System was eins meiner ersten Ticket 
 
 
 ## 🛠️ Einrichtung
-***
+
 1. Zuerst muss mit `/ticket send` oder `/ticket guild` die Guild ID hinzugefügt werden, damit der Ticket Count hochgezählt werden kann.  
     `/ticket send` sendet das Embed, das für das Erstellen eines Tickets zuständig ist.  
     `/ticket guild` kann verwendet werden, um die Guild ID zu aktualisieren, ohne den `/ticket send` Befehl erneut zu verwenden.
