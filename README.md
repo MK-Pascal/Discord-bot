@@ -4,6 +4,10 @@
 
 Hier habe ich für euch ein kleines Ticket System was eins meiner ersten Ticket Systeme war, die ich gemacht habe. Deswegen hat es nur halb so viele Features, wie ein gutes Ticket System.
 
+## 📦 packages
+- Es werden schon ein paar packages benötigt
+- In den Ticket System verwende ich **[Ezcord](https://ezcord.readthedocs.io/en/latest/pages/getting_started.html)**
+- Ansonsten sind alle anderen packages schon mit python Bei installiert.  
 
 
 ## 📋 Features 
@@ -49,6 +53,7 @@ Es ist wichtig das die richtigen ID's eingetragen sind, sonst können keine Tick
 ## 🎫 In Ticket
 
  4. In Ticket können dann 3 Button gedürckt werden, die das Ticket annehmen oder auch schlissen können.  
+ Die Ticket's können nur von Supportern geschlossen oder angenommen werden
 <div>
   <img width="auto" height="auto" src="https://cdn.discordapp.com/attachments/1089596110806466672/1089693398371414076/image.png">
   </img>
