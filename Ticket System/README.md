@@ -32,7 +32,7 @@ Hier habe ich für euch ein kleines Ticket System was eins meiner ersten Ticket 
 
 ***
 ##  ⌛ Cooldown
-2. Durch den Cooldown kann man erst aller 2 Minuten wieder ein neues Ticket öffnen.  
+2. Durch den Cooldown kann man erst alle 2 Minuten wieder ein neues Ticket öffnen.  
 Damit ist es auch durch einen Raid geschützt.
 <div>
   <img width="auto" height="auto" src="https://cdn.discordapp.com/attachments/1089596110806466672/1089646286225018952/image.png">
@@ -42,8 +42,8 @@ Damit ist es auch durch einen Raid geschützt.
 ***
 
 ## 🏷️ Embed
-3. Sobald das Embed erstellt wurde können auch schon die Ticket erstellt werden  
-Es ist wichtig das die richtigen ID's eingetragen sind, sonst können keine Ticket's erstellt werden.
+3. Sobald das Embed erstellt wurde, können auch schon die Ticket erstellt werden.  
+Es ist wichtig das die richtigen ID's eingetragen sind, sonst können keine Tickets erstellt werden.
 
 <div>
   <img width="auto" height="auto" src="https://cdn.discordapp.com/attachments/1089596110806466672/1089693819127202023/image.png">
@@ -52,8 +52,8 @@ Es ist wichtig das die richtigen ID's eingetragen sind, sonst können keine Tick
 
 ## 🎫 In Ticket
 
- 4. In Ticket können dann 3 Button gedürckt werden, die das Ticket annehmen oder auch schlissen können.  
- Die Ticket's können nur von Supportern geschlossen oder angenommen werden
+ 4. In Ticket können dann 3 Buttons gedürckt werden, die das Ticket annehmen oder auch schließen können.  
+ Die Ticket's können nur von Supportern geschlossen oder angenommen werden.
 <div>
   <img width="auto" height="auto" src="https://cdn.discordapp.com/attachments/1089596110806466672/1089693398371414076/image.png">
   </img>
@@ -63,14 +63,11 @@ Es ist wichtig das die richtigen ID's eingetragen sind, sonst können keine Tick
 ***
 
 ## 📝 Chatverlauf
-5. Nachdem das Ticket geschlossen wurde, wird der Chatverlauf zusammen mit einem Embed und einen .txt File in einen Log-Channel gesendet.  
-Dadurch ist der Chatverlauf auch noch für spätereZwecke verfügbar.  
+5. Nachdem das Ticket geschlossen wurde, wird der Chatverlauf zusammen mit einem Embed und einer .txt File in einen Log-Channel gesendet.  
+Dadurch ist der Chatverlauf auch noch für spätere Zwecke verfügbar.  
 Diese Funktion ist äußerst nützlich, da man jederzeit auf vergangene Chats zurückgreifen kann, um Probleme nachzuvollziehen oder um sich an frühere Konversationen zu erinnern.
 <div>
   <img class="ok" width="auto" height="auto" src="https://cdn.discordapp.com/attachments/1089596110806466672/1089693874529784009/image.png">
   </img>
 </div>
 <footer class="text glass" align="center">Make by MK_Pascal#0505</footer>
-
-
-
