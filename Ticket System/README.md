@@ -1,6 +1,6 @@
 # MK Open Source Files
 
-## 🎫 Ticket system v1.3
+## 🎫 Ticket System v1.3
 
 Hier habe ich für euch ein kleines Ticket System was eins meiner ersten Ticket Systeme war, die ich gemacht habe. Deswegen hat es nur halb so viele Features, wie ein gutes Ticket System.
 
