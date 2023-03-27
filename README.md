@@ -64,11 +64,6 @@ Diese Funktion ist äußerst nützlich, da man jederzeit auf vergangene Chats zu
 <div>
   <img class="ok" width="auto" height="auto" src="https://cdn.discordapp.com/attachments/1089596110806466672/1089693874529784009/image.png">
   </img>
-      <style>
-        .ok{
-            border-radius: 15px;
-        }
-    </style>
 </div>
 <footer class="text glass" align="center">Make by MK_Pascal#0505</footer>
 
