@@ -126,7 +126,7 @@ class TutorialView(discord.ui.View):
                 await interaction.response.send_message(embed=embed, ephemeral=True)
             else:
                 embed = discord.Embed(
-                    description="Ich weiß nicht wo ich dein Ticket erstellen soll🤔\nFrag bitte den Server owner ob er es akktiwiert",
+                    description="Ich weiß nicht wo ich dein Ticket erstellen soll🤔\nFrag bitte den Server owner ob er es aktiviert",
                     color=discord.Color.red())
                 await interaction.response.send_message(embed=embed, ephemeral=True)
         else:
@@ -141,7 +141,7 @@ class TutorialView(discord.ui.View):
                 timeup = discord.Embed(title="Cooldown", description=f"{word}", color=discord.Color.red())
                 return await interaction.response.send_message(embed=timeup, ephemeral=True)
             else:
-                cat = self.bot.get_channel(category_id)  # änder hier deine CATEGORY ID
+                cat = self.bot.get_channel(category_id)  
                 interaction.message.author = interaction.user
                 c.execute("SELECT printf('%03d', ticket_count + 1) FROM ticket WHERE guild_id = ?", (interaction.guild.id,))
                 channel_count = c.fetchone()[0]# Hier wird nach den ticket count gesucht wie viele schon geöffnet wurden
@@ -195,7 +195,7 @@ class main(discord.ui.View):
         self.bot = bot
         super().__init__(timeout=None)
 
-    @discord.ui.button(label="schlissen", style=discord.ButtonStyle.red, emoji="🔒", custom_id="close", row=1)
+    @discord.ui.button(label="schließen", style=discord.ButtonStyle.red, emoji="🔒", custom_id="close", row=1)
     async def button_callback2(self, channel, interaction):
         for child in self.children:
             child.disabled = True
@@ -227,13 +227,13 @@ class main(discord.ui.View):
             await asyncio.sleep(5)
             await interaction.channel.delete()
         else:
-            liste = [f"Nur {modrole.mention} können dieses Ticket schlissen",
+            liste = [f"Nur {modrole.mention} können dieses Ticket schließen",
                      f"Da hast du wohl eine sonder Funktion von den {modrole.mention} entdeckt",
                      f"Wenn die Zeit dazu gekommen ist, werden die {modrole.mention} sich schon drum kümmern"]
             wort = random.choice(liste)
             teamrolle = discord.Embed(
                 description=f"{wort}",
-                color=0x6E3457
+                color=discord.Color.red()
             )
             teamrolle.set_footer(text="Made by MK_Pascal#0505")
 
@@ -261,7 +261,7 @@ class main(discord.ui.View):
             wort = random.choice(liste)
             teamrolle = discord.Embed(
                 description=f"{wort}",
-                color=0x6E3457
+                color=discord.Color.red()
             )
             teamrolle.set_footer(text="Made by MK_Pascal#0505")
 
