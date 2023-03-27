@@ -27,6 +27,9 @@ db.commit()
 set_image = "https://cdn.discordapp.com/attachments/1085176967730581681/1087780407837204570/MK_greenTurquoise.gif"
 set_thumbnail = ""
 Mod_role = 1234567 # änder hier dir ID für die moderator rolle
+Log_Channel = 1234567
+category_id = 1234567
+
 
 class Ticket(commands.Cog):
     def __init__(self, bot):
@@ -138,7 +141,7 @@ class TutorialView(discord.ui.View):
                 timeup = discord.Embed(title="Cooldown", description=f"{word}", color=discord.Color.red())
                 return await interaction.response.send_message(embed=timeup, ephemeral=True)
             else:
-                cat = self.bot.get_channel(1234567)  # änder hier deine CATEGORY ID
+                cat = self.bot.get_channel(category_id)  # änder hier deine CATEGORY ID
                 interaction.message.author = interaction.user
                 c.execute("SELECT printf('%03d', ticket_count + 1) FROM ticket WHERE guild_id = ?", (interaction.guild.id,))
                 channel_count = c.fetchone()[0]# Hier wird nach den ticket count gesucht wie viele schon geöffnet wurden
@@ -208,7 +211,7 @@ class main(discord.ui.View):
             close.set_footer(text="Made by MK_Pascal#0505")
             await interaction.response.edit_message(view=self)
             await interaction.followup.send(embed=close)
-            logchannel = interaction.guild.get_channel(1234567)# Hier änderst du die channel wo dann die Logs gesendet werden
+            logchannel = interaction.guild.get_channel(Log_Channel)# Hier änderst du die channel wo dann die Logs gesendet werden
             logger = Logger(interaction.channel)
             await logger.create_log_file()
             embed2 = discord.Embed(
