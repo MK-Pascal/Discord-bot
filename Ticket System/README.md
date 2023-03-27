@@ -25,7 +25,7 @@ Hier habe ich für euch ein kleines Ticket System was eins meiner ersten Ticket 
 
 ‎ 
 <div>
-  <img width="auto" height="auto" src="https://cdn.discordapp.com/attachments/1089596110806466672/1089696671006457896/image.png">
+  <img width="auto" height="auto" src="https://cdn.discordapp.com/attachments/1089596110806466672/1089874650793775214/Comp_1_00000.png">
   </img>
 </div>  
 
