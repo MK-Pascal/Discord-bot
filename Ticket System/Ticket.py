@@ -174,7 +174,6 @@ class TutorialView(discord.ui.View):
                                 f"\nUnsere <@&{Mod_role}> werden sich so schnell wie möglich um dein anliegen drum kümmern.",
                     color=0x3BA45C
                 )
-                ticket_channel_em.set_thumbnail(url="https://cdn.discordapp.com/attachments/1077917507568013332/1078263684012458055/ticket.gif")
                 ticket_channel_em.set_image(url=set_image)
                 ticket_channel_em.set_footer(text="Made by MK_Pascal#0505")
                 await ticket_channel.send(embed=ticket_channel_em, view=main(self.bot))
