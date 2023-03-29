@@ -115,7 +115,7 @@ class TutorialView(discord.ui.View):
     async def button_callback1(self, button, interaction):
         bucket = self.cooldown.get_bucket(interaction.message)
         retry = bucket.update_rate_limit()
-        # Hier wird geguckt ob der guild in der Datenbank eingetragen ist. falls nicht kommt ein fehler meldung
+        # Hier wird geguckt ob der guild in der Datenbank eingetragen ist. falls nicht kommt eine fehler meldung
         c.execute('SELECT guild_id FROM ticket WHERE guild_id = ?',(interaction.guild.id,))
         wert = c.fetchone()
         if wert is None:
@@ -256,7 +256,7 @@ class main(discord.ui.View):
             await interaction.response.edit_message(view=self)
             await interaction.followup.send(embed=Bearbeiten)
         else:
-            liste = [f"Nur {modrole.mention} können dieses Ticket schlissen",
+            liste = [f"Nur {modrole.mention} können dieses Ticket schließen",
                      f"Da hast du wohl eine sonder funktion von den {modrole.mention} entdeckt"]
             wort = random.choice(liste)
             teamrolle = discord.Embed(
