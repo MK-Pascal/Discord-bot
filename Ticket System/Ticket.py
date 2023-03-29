@@ -1,8 +1,4 @@
-#   Ticket System von MK_Pascal#0505
-#   Hier ist ein kleines Ticket System Was ein guten einstieg für euch bietet.
-#   
-#
-#
+
 import discord
 from discord.ext import commands
 from discord.commands import SlashCommandGroup
@@ -13,7 +9,7 @@ from datetime import datetime
 import sqlite3
 from ezcord import times
 
-db = sqlite3.connect('Data/Ticket.db')# Hier Brauchst du einen Order mit den namen "Data" damit die Datenbank weiß wo sie erstellt werden muss.
+db = sqlite3.connect('Data/Ticket.db')
 c = db.cursor()
 c.execute('''
     CREATE TABLE IF NOT EXISTS ticket
@@ -26,7 +22,7 @@ db.commit()
 
 set_image = "https://cdn.discordapp.com/attachments/1085176967730581681/1087780407837204570/MK_greenTurquoise.gif"
 set_thumbnail = ""
-Mod_role = 1234567 # änder hier dir ID für die moderator rolle
+Mod_role = 1234567 
 Log_Channel = 1234567
 category_id = 1234567
 
@@ -45,18 +41,18 @@ class Ticket(commands.Cog):
 
     @ticket.command(description="Füge dein server wieder hinzu")
     @commands.has_permissions(administrator=True)
-    async def guild(self, ctx):# hier kannst du dein guild eintragen ohne den send command zu Benutzen
+    async def guild(self, ctx):
         c.execute('INSERT OR REPLACE INTO ticket(guild_id) VALUES(?)',(ctx.guild.id,))
         db.commit()
         await ctx.respond("Guild wurde eingetragen", ephemeral=True)
 
     @ticket.command(description="Ticket System")
     @commands.has_permissions(administrator=True)
-    async def send(self, ctx):# mit INSERT OR REPLACE wie der name schon sagt. Wird der gilt eingetragen oder ersetzt
+    async def send(self, ctx):
         c.execute('INSERT OR REPLACE INTO ticket(guild_id) VALUES(?)',(ctx.guild.id,))
         db.commit()
 
-        ticket_create = discord.Embed(# Das ich das Embed was dann ich Ticket Channel zusehen sein wird.
+        ticket_create = discord.Embed(
             title="Support kontaktieren",
             description="Drücke den Button, um ein neues Ticket zu erstellen.\n"
                         "\n"
@@ -67,7 +63,7 @@ class Ticket(commands.Cog):
         ticket_create.set_image(url=set_image)
         ticket_create.set_footer(text="Made by MK_Pascal#0505")
 
-        erfolgreich = discord.Embed(# Das wird nicht sichbar gesendet damit bei den Tciket Embed nicht zu sehen ist der den command benutzt hat.
+        erfolgreich = discord.Embed(
             title="Ticket System erfolgreich aufgesetzt!",
             color=0x2ECC70
         )
@@ -76,16 +72,15 @@ class Ticket(commands.Cog):
 
         await ctx.respond(embed=erfolgreich, ephemeral=True)
         await ctx.channel.send(embed=ticket_create, view=TutorialView(self.bot))
-        # mit view=TutorialView(self.bot) Wird der Button mit eingebaut der in Zeile 100 auch noch anpassbar ist
 
 def setup(bot):
     bot.add_cog(Ticket(bot))
 
-class Logger:# In der Logger klasse wird das Text File erstellt das dann in den Log Channel gesendet wird.
+class Logger:
     def __init__(self, channel: discord.TextChannel):
         self.channel = channel
     async def create_log_file(self):
-        with open(f"Log {self.channel.name}.txt", "w", encoding="utf-8") as f:# Mit {self.channel.name} wird das Text file nach den channel name benannt
+        with open(f"Log {self.channel.name}.txt", "w", encoding="utf-8") as f:
             f.write(f'Ticket " {self.channel.name}"\n\n')
             f.write("-----------------------------------------\n")
             messages = await self.channel.history(limit=69420).flatten()
@@ -108,14 +103,12 @@ class TutorialView(discord.ui.View):
     def __init__(self, bot):
         self.bot = bot
         super().__init__(timeout=None)
-        self.cooldown = commands.CooldownMapping.from_cooldown(1, 120, commands.BucketType.user)#hier kannst du einstellen wie lange es Dauern soll bis Man ein neues Ticket erstellen kann.
-
-
+        self.cooldown = commands.CooldownMapping.from_cooldown(1, 120, commands.BucketType.user)
     @discord.ui.button(label="Ticket erstellen", style=discord.ButtonStyle.green, emoji="📩", custom_id="ticket", row=1)
     async def button_callback1(self, button, interaction):
         bucket = self.cooldown.get_bucket(interaction.message)
         retry = bucket.update_rate_limit()
-        # Hier wird geguckt ob der guild in der Datenbank eingetragen ist. falls nicht kommt eine fehler meldung
+        
         c.execute('SELECT guild_id FROM ticket WHERE guild_id = ?',(interaction.guild.id,))
         wert = c.fetchone()
         if wert is None:
@@ -141,17 +134,16 @@ class TutorialView(discord.ui.View):
                 timeup = discord.Embed(title="Cooldown", description=f"{word}", color=discord.Color.red())
                 return await interaction.response.send_message(embed=timeup, ephemeral=True)
             else:
-                cat = self.bot.get_channel(category_id)  
+                cat = self.bot.get_channel(category_id)
                 interaction.message.author = interaction.user
                 c.execute("SELECT printf('%03d', ticket_count + 1) FROM ticket WHERE guild_id = ?", (interaction.guild.id,))
-                channel_count = c.fetchone()[0]# Hier wird nach den ticket count gesucht wie viele schon geöffnet wurden
+                channel_count = c.fetchone()[0]
 
                 overwrites = {
-                    # Mit der get_role funktion kannst du in der oben eingetragenen rolle festlegen wer das Ticket sehen darf.
                     interaction.guild.default_role: discord.PermissionOverwrite(read_messages=False),
                     interaction.guild.get_role(Mod_role): discord.PermissionOverwrite(read_messages=True,send_messages=True),
                     interaction.user: discord.PermissionOverwrite(read_messages=True, send_messages=True)
-                    # in den py-cord docs kannst du auch nochmal nach schauen was es für Permissions gibt.
+                    
                 }
 
                 ticket_channel = await interaction.guild.create_text_channel(
@@ -187,7 +179,7 @@ class TutorialView(discord.ui.View):
                 ticket_channel_em.set_footer(text="Made by MK_Pascal#0505")
                 await ticket_channel.send(embed=ticket_channel_em, view=main(self.bot))
                 c.execute('UPDATE ticket SET ticket_count = ticket_count + 1 WHERE guild_id = ?', (interaction.guild.id,))
-                db.commit()# hier wird der ticket count um 1 noch Gesetzt.
+                db.commit()
 
 
 class main(discord.ui.View):
@@ -211,7 +203,7 @@ class main(discord.ui.View):
             close.set_footer(text="Made by MK_Pascal#0505")
             await interaction.response.edit_message(view=self)
             await interaction.followup.send(embed=close)
-            logchannel = interaction.guild.get_channel(Log_Channel)# Hier änderst du die channel wo dann die Logs gesendet werden
+            logchannel = interaction.guild.get_channel(Log_Channel)
             logger = Logger(interaction.channel)
             await logger.create_log_file()
             embed2 = discord.Embed(
