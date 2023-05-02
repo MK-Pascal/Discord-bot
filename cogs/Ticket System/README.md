@@ -4,6 +4,8 @@
 
 Hier habe ich für euch ein kleines Ticket System was eins meiner ersten Ticket Systeme war, die ich gemacht habe. Deswegen hat es nur halb so viele Features, wie ein gutes Ticket System.
 
+## ⚠️ Wichtig!!!
+- Ihr müsst euch ein Order names Data erstellen
 
 ## 📦 packages
 - Es werden schon ein paar packages benötigt
